@@ -1,0 +1,7 @@
+{% if image_url %}
+  <p><strong>Prompt:</strong> {{ prompt }}</p>
+  <img src="{{ image_url }}" alt="Generated Image">
+{% elif error %}
+  <p style="color: red;">{{ error }}</p>
+{% endif %}
+<a href="{% url 'prompt_input' %}">Try Another</a>

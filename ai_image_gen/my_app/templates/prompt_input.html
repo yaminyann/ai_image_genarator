@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prompt Input</title>
+</head>
+<body>
+    <h1>Describe an image</h1>
+    <form method="POST" action="{% url 'generate_image' %}">
+        {% csrf_token %}
+        <input type="text" name="prompt" placeholder="Type your prompt" required>
+        <button type="submit">Generate Image</button>
+    </form>
+</body>
+</html>
